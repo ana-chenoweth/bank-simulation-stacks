@@ -48,5 +48,15 @@ public:
         if (!colaAtendidos.EstaVacia())
             colaAtendidos.Imprimir();
     }
+    int obtenerTamEspera() {
+        return colaEspera.ObtenerTam();
+    }
+
+    int obtenerTamAtendidos() {
+        return colaAtendidos.ObtenerTam();
+    }
+    std::string obtenerFrenteEspera() {
+        return colaEspera.ObtenerFrente();
+    }
 }
 #endif // CAJA_HPP_INCLUDED
