@@ -16,6 +16,15 @@ void LimpiarPantalla() {
     system("clear");
 }
 
+string seleccionarAleatorio(Cola<string>& cola) {
+    int indice = rand() % cola.ObtenerTam();
+    for (int i = 0; i < indice; ++i) {
+        cola.Agregar(cola.ObtenerFrente());
+        cola.Eliminar();
+    }
+    return cola.ObtenerFrente();
+}
+
 int main() {
     srand(time(0));
 
@@ -33,5 +42,6 @@ int main() {
     cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n\n";
     cout << "El tiempo de atenci\242n por persona es aleatorio\n\n\n";
 
+    pause();
     return 0;
 }
