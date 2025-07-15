@@ -25,6 +25,14 @@ string seleccionarAleatorio(Cola<string>& cola) {
     return cola.ObtenerFrente();
 }
 
+string generarNombreCompleto(Cola<string>& nombres, Cola<string>& apellidos) {
+    string nombreCompleto;
+    string nombreAleatorio = seleccionarAleatorio(nombres);
+    string apellidoAleatorio = seleccionarAleatorio(apellidos);
+    nombreCompleto = nombreAleatorio + " " + apellidoAleatorio;
+    return nombreCompleto;
+}
+
 int main() {
     srand(time(0));
 
