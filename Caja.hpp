@@ -19,6 +19,21 @@ public:
         tiempoEspera = rand() % INTERVALO;
         contadorAtencion = 0;
     }
+    void atenderCliente() {
+        if (!colaEspera.EstaVacia()) {
+            std::cout << "\tCaja atendiendo a " << colaEspera.ObtenerFrente() << "\t\t";
+            std::cout << "Tiempo de atenci&oacute;n: " << contadorAtencion << "\n\n";
+            contadorAtencion++;
+            if (contadorAtencion >= colaEspera.ObtenerFrente().length()) {
+                colaAtendidos.Agregar(colaEspera.ObtenerFrente());
+                colaEspera.Eliminar();
+                contadorAtencion = 0;
+                tiempoEspera = contadorAtencion + (rand() % INTERVALO);
+            }
+        } else {
+            std::cout << "\tCaja desocupada \n\n\n";
+        }
+    }
     void agregarCliente(const std::string& nombreCompleto, int tiempoActual) {
         if (tiempoActual >= tiempoEspera) {
             colaEspera.Agregar(nombreCompleto);
