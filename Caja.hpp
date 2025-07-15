@@ -40,5 +40,13 @@ public:
             tiempoEspera = tiempoActual + (rand() % INTERVALO);
         }
     }
+    void imprimirEspera() {
+        if (!colaEspera.EstaVacia())
+            colaEspera.ImprimirSinFrente();
+    }
+    void imprimirAtendidos() {
+        if (!colaAtendidos.EstaVacia())
+            colaAtendidos.Imprimir();
+    }
 }
 #endif // CAJA_HPP_INCLUDED
