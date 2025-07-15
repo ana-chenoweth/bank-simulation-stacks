@@ -7,6 +7,15 @@
 
 using namespace std;
 
+void pause() {
+    std::cout << "Presiona Enter para continuar...";
+    std::cin.get();
+}
+
+void LimpiarPantalla() {
+    system("clear");
+}
+
 int main() {
     srand(time(0));
 
@@ -16,6 +25,13 @@ int main() {
 
     Cola<string> colaNombres;
     Cola<string> colaApellidos;
-    
+    cargarDatosEnCola(colaNombres, "nombres.txt");
+    cargarDatosEnCola(colaApellidos, "apellidos.txt");
+
+    int segundos = 0;
+
+    cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n\n";
+    cout << "El tiempo de atenci\242n por persona es aleatorio\n\n\n";
+
     return 0;
 }
