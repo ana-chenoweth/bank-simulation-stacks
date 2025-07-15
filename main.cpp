@@ -48,14 +48,14 @@ int main() {
 
     int segundos = 0;
 
-    cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n\n";
-    cout << "El tiempo de atenci\242n por persona es aleatorio\n\n\n";
+    cout << "La caja atenderá a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n\n";
+    cout << "El tiempo de atención por persona es aleatorio\n\n\n";
 
     pausee();
     while (segundos <= intervaloAtencionTotal) {
         LimpiarPantalla();
         try {
-            cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n";
+            cout << "La caja atenderá a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n";
             cout << "Reloj: " << segundos <<  endl << endl;
 
             caja1.atenderCliente();
@@ -85,5 +85,33 @@ int main() {
 
         sleep(1);
     }
+    cout << "\n\n\nTerminó el tiempo de atención de las cajas.\n\n";
+
+    //CAJA 1
+    cout << "Caja 1 atendió en total a " << caja1.obtenerTamAtendidos() << " personas, cuyos nombres, en orden de atención, son: \n";
+    caja1.imprimirAtendidos();
+
+    cout << "Quedaron " << caja1.obtenerTamEspera() << " personas en espera en Caja 1.\n";
+    caja1.imprimirEspera();
+
+    cout << "La caja terminó de atender a " << caja1.obtenerFrenteEspera();
+
+    //CAJA 2
+    cout << "\n\nCaja 2 atendió en total a " << caja2.obtenerTamAtendidos() << " personas, cuyos nombres, en orden de atención, son: \n";
+    caja2.imprimirAtendidos();
+
+    cout << "Quedaron " << caja2.obtenerTamEspera() << " personas en espera en Caja 2.\n";
+    caja2.imprimirEspera();
+
+    cout << "La caja terminó de atender a " << caja2.obtenerFrenteEspera();
+
+    //CAJA 3
+    cout << "\n\nCaja 3 atendió en total a " << caja3.obtenerTamAtendidos() << " personas, cuyos nombres, en orden de atención, son: \n";
+    caja3.imprimirAtendidos();
+
+    cout << "Quedaron " << caja3.obtenerTamEspera() << " personas en espera en Caja 3.\n";
+    caja3.imprimirEspera();
+
+    cout << "La caja terminó de atender a " << caja3.obtenerFrenteEspera();
     return 0;
 }
