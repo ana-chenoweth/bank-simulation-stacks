@@ -1,13 +1,14 @@
 #include <iostream>
 #include "Cola/Cola.hpp"
 #include "Caja.hpp"
+#include <unistd.h> 
 
 #define INTERVALO_ATENCION_MIN 10
 #define INTERVALO_ATENCION_MAX 15
 
 using namespace std;
 
-void pause() {
+void pausee() {
     std::cout << "Presiona Enter para continuar...";
     std::cin.get();
 }
@@ -50,6 +51,39 @@ int main() {
     cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n\n";
     cout << "El tiempo de atenci\242n por persona es aleatorio\n\n\n";
 
-    pause();
+    pausee();
+    while (segundos <= intervaloAtencionTotal) {
+        LimpiarPantalla();
+        try {
+            cout << "La caja atender\240 a cuantas personas pueda en " << intervaloAtencionTotal << " minutos.\n";
+            cout << "Reloj: " << segundos <<  endl << endl;
+
+            caja1.atenderCliente();
+            caja2.atenderCliente();
+            caja3.atenderCliente();
+
+            cout << "En espera: \n\n";
+            cout << "Caja 1: \n";
+            caja1.imprimirEspera();
+
+            cout << "Caja 2: \n";
+            caja2.imprimirEspera();
+
+            cout << "Caja 3: \n";
+            caja3.imprimirEspera();
+
+            cout << endl;
+
+            caja1.agregarCliente(generarNombreCompleto(colaNombres, colaApellidos), segundos);
+            caja2.agregarCliente(generarNombreCompleto(colaNombres, colaApellidos), segundos);
+            caja3.agregarCliente(generarNombreCompleto(colaNombres, colaApellidos), segundos);
+
+            segundos++;
+        } catch(const char* e) {
+            cerr << "Error: " << e << endl;
+        }
+
+        sleep(1);
+    }
     return 0;
 }
