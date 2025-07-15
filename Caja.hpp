@@ -58,5 +58,17 @@ public:
     std::string obtenerFrenteEspera() {
         return colaEspera.ObtenerFrente();
     }
+};
+void cargarDatosEnCola(Cola<std::string>& cola, const std::string& archivo) {
+    std::ifstream file(archivo);
+    if (file.is_open()) {
+        std::string dato;
+        while (getline(file, dato)) {
+            cola.Agregar(dato);
+        }
+        file.close();
+    } else {
+        std::cerr << "No se pudo abrir el archivo " << archivo << std::endl;
+    }
 }
 #endif // CAJA_HPP_INCLUDED
