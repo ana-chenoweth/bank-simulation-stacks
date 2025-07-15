@@ -19,5 +19,11 @@ public:
         tiempoEspera = rand() % INTERVALO;
         contadorAtencion = 0;
     }
+    void agregarCliente(const std::string& nombreCompleto, int tiempoActual) {
+        if (tiempoActual >= tiempoEspera) {
+            colaEspera.Agregar(nombreCompleto);
+            tiempoEspera = tiempoActual + (rand() % INTERVALO);
+        }
+    }
 }
 #endif // CAJA_HPP_INCLUDED
