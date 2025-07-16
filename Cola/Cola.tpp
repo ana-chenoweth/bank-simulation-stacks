@@ -126,7 +126,7 @@ void Cola<T>::ImprimirSinFrente() const
 {
      if (EstaVacia())
     {
-        std::cout << "La cola está vacía" << std::endl;
+        std::cout << "La cola esta vacia" << std::endl;
         return;
     }
 

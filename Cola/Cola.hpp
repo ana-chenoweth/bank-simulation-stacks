@@ -1,6 +1,6 @@
 /**
  * \file Cola.hpp
- * \brief Implementaci&oacute;n de una cola gen&eacute;rica.
+ * \brief Implementación de una cola genérica.
  * \author Ana Laura Chenoweth Galaz, Georgina Salcido Valenzuela
  * \date 17/03/2024
  */
@@ -11,7 +11,7 @@
 
 /** \class Cola
  *
- * Permite utilizar <b> colas de datos gen&eacute;ricos. </b> y ofrece un conjunto de operaciones b&aacute;sicas: agregar, eliminar, obtener el tamano de la cola,
+ * Permite utilizar <b> colas de datos genéricos. </b> y ofrece un conjunto de operaciones básicas: agregar, eliminar, obtener el tamano de la cola,
  * obtener el valor del fondo, obtener el valor del frente, imprimir, vaciar, etc.
  **/
 
@@ -36,15 +36,15 @@ public:
      */
     Cola(const Cola<T> &c);
 
-    /** \brief Sobrecarga del operador de asignaci&oacute;n
+    /** \brief Sobrecarga del operador de asignación
      *
      * \param &c Cola asignada en una nueva cola.
-     * \return Cola& Cola a la cu&aacute;l se le asign&oacute; la cola.
+     * \return Cola& Cola a la cuál se le asignó la cola.
      *
      */
     Cola<T> &operator=(const Cola &c);
 
-    /** \brief M&eacute;todo para agregar un elemento a la cola.
+    /** \brief Método para agregar un elemento a la cola.
      *
      * \param valor T elemento a agregar
      * \return void
@@ -52,56 +52,56 @@ public:
      */
     void Agregar(T valor);
 
-    /** \brief M&eacute;todo para eliminar un elemento de la cola.
+    /** \brief Método para eliminar un elemento de la cola.
      *
      * \return void
      *
      */
     void Eliminar();
 
-    /** \brief M&eacute;todo que regresa el tama�o de la cola
+    /** \brief Método que regresa el tama�o de la cola
      *
      * \return int Tamano de la cola.
      *
      */
     int ObtenerTam() const;
 
-    /** \brief M&eacute;todo que regresa el ultimo elemento de la cola.
+    /** \brief Método que regresa el ultimo elemento de la cola.
      *
-     * \return T Valor del &uacute;ltimo elemento.
+     * \return T Valor del último elemento.
      *
      */
     T ObtenerFondo() const;
 
-    /** \brief M&eacute;todo que regresa el primer elemento de la cola.
+    /** \brief Método que regresa el primer elemento de la cola.
      *
      * \return T Valor del primer elemento.
      *
      */
     T ObtenerFrente() const;
 
-    /** \brief M&eacute;todo que retorna si la cola est&aacute; v&iacute;cia.
+    /** \brief Método que retorna si la cola está v&iacute;cia.
      *
      * \return bool
      *
      */
     bool EstaVacia() const;
 
-    /** \brief M&eacute;todo para vaciar la cola.
+    /** \brief Método para vaciar la cola.
      *
      * \return void
      *
      */
     void Vaciar();
 
-    /** \brief M&eacute;todo que imprime todo el contenido de la cola.
+    /** \brief Método que imprime todo el contenido de la cola.
      *
      * \return void
      *
      */
     void Imprimir() const;
 
-    /** \brief M&eacute;todo que imprime el contenido de la cola a excepcion del primer elemento.
+    /** \brief Método que imprime el contenido de la cola a excepcion del primer elemento.
      *
      * \return void
      *
