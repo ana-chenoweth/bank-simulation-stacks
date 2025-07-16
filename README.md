@@ -2,11 +2,11 @@
 
 This is an academic project simulating a simple banking system where customers are attended in three different teller lines ("cajas"). The simulation uses a generic queue implementation in C++ to manage clients and their waiting times.
 
-<img src="media/simulation-bank.gif" alt="Video test" width="800">
+<img src="img/simulation-bank.gif" alt="Video test" width="800">
 
-<img src="media/conclusions1.png" alt="Conclusions 1" width="800">
+<img src="img/conclusions1.png" alt="Conclusions 1" width="800">
 
-<img src="media/conclusions2.png" alt="Conclusions 2" width="800">
+<img src="img/conclusions2.png" alt="Conclusions 2" width="800">
 
 ## Description
 
