@@ -60,8 +60,8 @@ int main() {
 
     Cola<string> colaNombres;
     Cola<string> colaApellidos;
-    cargarDatosEnCola(colaNombres, "nombres.txt");
-    cargarDatosEnCola(colaApellidos, "apellidos.txt");
+    cargarDatosEnCola(colaNombres, "names/nombres.txt");
+    cargarDatosEnCola(colaApellidos, "names/apellidos.txt");
 
     int segundos = 0;
 
