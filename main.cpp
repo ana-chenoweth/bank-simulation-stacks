@@ -1,3 +1,9 @@
+/**
+ * \file main.hpp
+ * \brief Aplicaci&oacute;n de una cola con strings. Para simular una cola de banco con tres cajas.
+ * \author Ana Laura Chenoweth Galaz, Georgina Salcido Valenzuela
+ * \date 17/03/2024
+ */
 #include <iostream>
 #include "Cola/Cola.hpp"
 #include "Caja.hpp"
@@ -16,7 +22,12 @@ void pausee() {
 void LimpiarPantalla() {
     system("clear");
 }
-
+/** \brief M&eacute;todo que selecciona un dato al azar de una cola.
+ *
+ * \param cola Cola<string>& Cola de la que se seleccionan los datos.
+ * \return string Dato seleccionado al azar
+ *
+ */
 string seleccionarAleatorio(Cola<string>& cola) {
     int indice = rand() % cola.ObtenerTam();
     for (int i = 0; i < indice; ++i) {
@@ -25,7 +36,13 @@ string seleccionarAleatorio(Cola<string>& cola) {
     }
     return cola.ObtenerFrente();
 }
-
+ /** \brief M&eacute;todo que concatena dos datos seleccionados al azar.
+ *
+ * \param nombres Cola<string>& Cola de nombres extra&iacute;dos de un archivo.
+ * \param apellidos Cola<string>& Cola de apellidos extra&iacute;dos de un archivo.
+ * \return string Nombre completo
+ *
+ */
 string generarNombreCompleto(Cola<string>& nombres, Cola<string>& apellidos) {
     string nombreCompleto;
     string nombreAleatorio = seleccionarAleatorio(nombres);
